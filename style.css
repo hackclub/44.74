@@ -198,10 +198,6 @@ html {
   text-decoration: none;
 }
 
-#enter:hover {
-  cursor: pointer;
-}
-
 #mute {
   position: absolute;
   top: 20px;

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>This is yours...</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cloud-82ktnj8bt-hack-club-bot.vercel.app/0anime.min.js"></script>
+  <script defer data-domain="frankfrontkilobyte.sampoder.repl.co" src="https://plausible.io/js/script.js"></script>
+</head>
+
+<body
+  style="height: 100vh; width: 100vw; display: flex; background-size: cover; justify-content: center; align-items: center; background-position: center; flex-direction: column; color: white; text-align: center;">
+  <div class="container" id="modal" style="display: none">
+    <div class="message">
+      <div class="text">
+        <p>We'll send you an email in the coming month with the plan:</p>
+        <form style="margin-top: 8px;"
+        action="https://airtable-forms-proxy.hackclub.dev/api/app2Rl5vRDgCu1glz/RSVP?redirect=https://frankfrontkilobyte.sampoder.repl.co/submitted.html"
+        id="form" method="POST">
+        <input type="text" id="email" name="Email" placeholder="vera@hackclub.com">
+          <button style="background: #000; color: white; font-size: 16px; margin-top: 12px;">
+      Submit
+    </button>
+      </form>
+      </div>
+      <img src="stripes.svg" class="stripes" />
+    </div>
+  </div>
+  <img src='first-page-topology.svg' class="parallax fade-in topology" value="5" />
+  <audio id="song" loop>
+    <source src="https://cloud-lv7v8tzsr-hack-club-bot.vercel.app/0banjn_t_audio.mp4" type="audio/mp4" />
+  </audio>
+  <div id="load-enter">
+    <h2>This summer...</h2>
+    <h1>Join <a href="https://hackclub.com">Hack Club</a> for an adventure of a lifetime</h1>
+    <p>In years past, we've <a href="https://www.youtube.com/watch?v=2BID8_pGuqA">traveled across the US</a>, assembled
+      in <a href="https://www.youtube.com/watch?v=PnK4gzO6S3Q">San Francisco</a> and partied in <a
+        href="https://www.youtube.com/watch?v=KLx4NZZPzMc">Delhi</a>.</p>
+    <button id="enter" onclick="enter()">enter</button>
+  </div>
+  <div id="hidden" style="display: none;">
+    <button id="mute" onclick="mute()">mute</button>
+    <h2 style="font-size: 72px; margin-bottom: 8px; color: #337CA8;" class="std"><span class="load-one">Save</span>
+      <span class="load-two">The</span> <span class="load-three">Date</span><span class="load-four">:</span></h2>
+    <h1 style="text-transform: uppercase; font-size: 96px; margin-bottom: 8px;" class="ml15 date"><span
+        class="word">July</span> <br class="sm-only" /> <span class="word">27<sup style="font-size: 36px">
+          th</sup></span> <span class="word">-</span> <span class="word">31<sup style="font-size: 36px">st</sup></span>
+    </h1>
+    <h2 style="font-size: 42px; margin-bottom: 8px; color: #DE6934" class="load-animate stars"><span
+        style="text-wrapper smaller-on-mobile"><span class="letters">Somewhere under the stars, USA.</span></span></h2>
+    <h2 style="font-size: 24px; margin-bottom: 8px; color: #DE6934" class="sm-only load-five">Somewhere under <br /> the
+      stars, USA.</h2>
+    <script src="script.js"></script>
+    <div class="dust"></div>
+    <button onclick="handleClick()" class="more-info">
+      Keep Me In The Know
+    </button>
+  </div>
+  <style>
+    body {
+      margin: 0;
+      font-family: "John Muir Sans";
+    }
+
+    @media screen and (max-width: 480px) {
+      /*       .smaller-on-mobile .word {
+        font-size: 0.7em;
+      } */
+
+      .std {
+        font-size: 52px !important;
+      }
+
+      .date {
+        font-size: 60px !important;
+      }
+
+      .stars {
+        display: none;
+      }
+
+      sup {
+        font-size: 24px !important;
+      }
+    }
+
+    html {
+      margin: 0px;
+      background: black;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+
+    h2 {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      overflow: hidden;
+    }
+
+    h3 {
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+
+    input[type="text"] {
+      background: none;
+      border: 2.5px solid black;
+      width: 100%;
+      border-radius: 8px;
+      height: 42px;
+      margin-top: 4px;
+      font-family: "EB Garmond";
+      text-align: center;
+      font-size: 18px;
+      color: black;
+    }
+
+    button {
+      background: #D9D4D1;
+      border-radius: 8px;
+      font-family: "John Muir Sans";
+      font-size: 24px;
+      border: none;
+      text-align: center;
+      color: black;
+      padding: 18px 16px 16px 16px;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 0.3
+      }
+    }
+
+    .starmap {
+      position: absolute;
+      z-index: -3;
+      min-width: 100vw;
+      min-height: 100vh;
+    }
+
+    @keyframes twinkling {
+
+      /* (msw) Credit for this totally goes to https://codepen.io/WebSonick/pen/vjmgu */
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -10000px 5000px;
+      }
+    }
+
+    .dust {
+      z-index: -2;
+      /* above the stars, below the text */
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: transparent url(https://cloud-hyyxw15ok-hack-club-bot.vercel.app/1dust4.png) repeat top center;
+      animation: twinkling 400s linear infinite;
+    }
+
+    .container {
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(129deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+    }
+
+    .message {
+      backdrop-filter: blur(10px);
+      border-radius: 6px;
+      border: 4px solid rgba(0, 0, 0, 1);
+      background: #D9D4D1;
+      max-width: 650px;
+      font-size: 24px;
+      font-family: "EB Garamond";
+      color: black;
+    }
+    .text {
+    padding: 48px;
+      padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .email {
+    font-weight: 600;
+  }
+
+  .stripes {
+    height: 1em;
+    width: 100%;
+    margin-bottom: -8.1px;
+  }
+
+  .hidden {
+    opacity: 0;
+  }
+
+  p {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+  }
+  </style>
+</body>
+
+<script>
+  function getStarmapCanvas(index) {
+    let el = document.querySelector(`canvas#starmap-${index}`)
+    if (!el) {
+      el = document.createElement('canvas')
+      el.id = `starmap-${index}`
+      el.classList.add('starmap')
+      el.classList.add('parallax')
+      el.classList.add('fade-in')
+      document.body.appendChild(el)
+      el.setAttribute('value', 2 / Math.log(index + 1))
+    }
+    return el
+  }
+  function createStarmap(index) {
+    const el = getStarmapCanvas(index)
+    const ctx = el.getContext('2d')
+    ctx.canvas.width = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+    const starCount = (index + 1) * 10
+    for (let i = 0; i < starCount; i++) {
+      let x = Math.random() * ctx.canvas.width
+      let y = Math.random() * ctx.canvas.height
+      let size = 2 / Math.log(index + 1)
+      // star glow
+      ctx.shadowColor = "#FFF2CC";
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.shadowBlur = 10;
+      // star color
+      ctx.fillStyle = "white";
+      // draw star
+      ctx.beginPath();
+      ctx.ellipse(x, y, size, size, Math.PI / 4, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+  }
+  // starfield
+  createStarmap(0) // closer & larger
+  createStarmap(1) // further & smaller as we go down
+  createStarmap(2)
+  createStarmap(3)
+</script>
+
+</html>

@@ -1,0 +1,214 @@
+@font-face {
+  font-family: "John Muir Sans";
+  src: url("https://cloud-m3jxcgc5p-hack-club-bot.vercel.app/0johnmuirsansregular.woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+@keyframes fade-in-one {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-two {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-three {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-four {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-in-five {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.load-one {
+  animation: fade-in-one 3s;
+}
+
+.load-two {
+  animation: fade-in-two 3s;
+}
+
+.load-three {
+  animation: fade-in-three 3s;
+}
+
+.load-four {
+  animation: fade-in-four 3s;
+}
+
+.load-five {
+  animation: fade-in-five 9s;
+}
+
+.more-info {
+  animation: fade 10s;
+}
+
+.load-animate {
+  position: relative;
+}
+
+.load-animate .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.letters {
+  max-width: 80vw;
+}
+
+.load-animate .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+}
+
+.ml15 .word {
+  display: inline-block;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.sm-only {
+  display: none;
+}
+
+.topology {
+  position: absolute; 
+  z-index: -1; 
+  min-width: 100vw; 
+  min-height: 100vh; 
+  opacity: 0.3;
+}
+@media screen and (max-width: 600px) {
+  .not-sm {
+    display: none;
+  }
+  
+  .sm-only {
+    display: initial !important;
+  }
+
+  #enter {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .topology {
+    min-height: 0 !important;
+    min-width: 0 !important;
+  }
+
+  .more-info {
+    font-size: 18px !important;
+    padding: 10px !important;
+  }
+}
+
+#load-enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#load-enter h2 {
+  color: #337CA8 !important;
+}
+
+#load-enter h1 {
+  max-width: 850px;
+  margin-top: 20px;
+  color: #DE6934;
+  font-size: 42px; 
+}
+
+#load-enter p {
+  font-family: "EB Garamond";
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+#load-enter a {
+  color: #DE6934;
+  text-decoration: none;
+}
+
+#enter:hover {
+  cursor: pointer;
+}
+
+#mute {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  padding: 10px;
+}

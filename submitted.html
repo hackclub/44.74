@@ -18,22 +18,13 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hidden {
     display: none
-  }
-  
-  .container {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(129deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.40) 100%);
   }
 
   .message {
@@ -71,20 +62,18 @@
 
 </style>
 <img src='topography.svg' class="parallax" value="5" style="position: absolute; z-index: -5; width: 100vw; height: 100vh; object-fit: cover; opacity: 0.5" />
-<div class="container">
-  <div class="message">
-    <div class="text">
-      <div class="hidden" id="broadcast">
-      <p style="display: inline">Broadcasting to</p>
-      <p class="email hidden" style="display: inline"></p>
-      </div>
-      <p>We can't wait to see you IRL this summer, it'll be a magical weekend of fun alongside the most interesting high school makers on the internet. Live outside the US? <a href="http://hack.af/international">Learn how you can come!</a></p>
-      <p style="opacity: 0.3; font-size: 0.6em;" class="check-the-console">Feeling adventurous? Inspect this.</p>
+<div class="message">
+  <div class="text">
+    <div class="hidden" id="broadcast">
+    <p style="display: inline">Broadcasting to</p>
+    <p class="email hidden" style="display: inline"></p>
     </div>
-    <img src="stripes.svg" class="stripes" />
+    <p>We can't wait to see you IRL this summer, it'll be a magical weekend of fun alongside the most interesting high school makers on the internet. Live outside the US? <a href="http://hack.af/international">Learn how you can come!</a></p>
+    <p style="opacity: 0.3; font-size: 0.6em;" class="check-the-console">Feeling adventurous? Inspect this.</p>
   </div>
+  <img src="stripes.svg" class="stripes" />
 </div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 <script>
   const val = window.sessionStorage.getItem("Email")
   if (val) {

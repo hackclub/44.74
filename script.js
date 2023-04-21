@@ -20,13 +20,6 @@ a place to make your own.
 `
 console.log(consoleMessage)
 
-addEventListener("keydown", (event) => {
-  var song = document.querySelector("#song")
-  if (song.paused) {
-    song.play()
-  }
-});
-
 function mute() {
   var song = document.querySelector("#song")
   var mute = document.querySelector("#mute")

@@ -150,10 +150,6 @@ html {
     display: initial !important;
   }
 
-  #enter {
-    display: none;
-  }
-
   body {
     overflow: hidden;
     position: relative;

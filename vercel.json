@@ -1,5 +1,6 @@
 {
   "redirects": [
-    { "source": "/%C2%A0", "destination": "/" }
+    { "source": "/%C2%A0", "destination": "https://outernet.hackclub.com/" },
+    { "source": "/", "destination": "https://outernet.hackclub.com/" }
   ]
 }
